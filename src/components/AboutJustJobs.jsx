@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
+
 const useStyles = makeStyles(() => ({
   container: {
     backgroundColor: "#f5f5f5",
@@ -12,6 +13,7 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
     borderRadius: 5,
     boxShadow: "0px 0px 15px rgba(0,0,0,0.2)",
+    marginTop: "50px",
   },
  
   title: {
@@ -19,10 +21,20 @@ const useStyles = makeStyles(() => ({
     marginBottom: "30px",
     letterSpacing: "1px",
     textTransform: "uppercase",
+    fontSize: "3.5rem",
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "#0b1046",
+    textShadow:" 2px 2px 2px rgba(89, 13, 211, 0.553)",
+    margin: "2rem 0",
   },
+
   text: {
-    fontSize: "18px",
     lineHeight: 1.5,
+    textAlign: "center",
+    fontWeight: "700",
+    fontSize: "1.2rem",
+
   },
 }));
 
@@ -30,11 +42,11 @@ function AboutJustJobs() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.container}>
+    <Box className={classes.container} >
       <Typography variant="h3" className={classes.title}>
         About JustJobs
       </Typography>
-      <Typography variant="body1" className={classes.text}>
+      <Typography variant="body1" className={classes.text} >
         JustJobs is a job portal that connects job seekers with employers. We
         believe that everyone deserves a fair chance at finding the right job,
         and that employers should have access to a diverse pool of candidates.

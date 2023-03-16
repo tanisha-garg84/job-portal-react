@@ -1,5 +1,4 @@
 import React from "react";
-import JobCard from "./JobCard";
 import JobPortalSearchBox from "./SearchBox";
 import BlueGradianBox from "./BlueGradianBox";
 import Box from "@mui/material/Box";
@@ -11,35 +10,31 @@ import CompanyLogos from "./MajorCompaniesHomePage";
 import Footer from "./Footer";
 
 const useStyles = makeStyles({
-  card: {
-    margin: "10px",
-    padding: "10px",
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap"
-  }
+  nav: {
+    position: "sticky",
+    top: "0",
+    zIndex: "2",
+    margin: "0%",
+    padding: "0px",
+    marginTop: "0%",
+    width: "100vw",
+    backgroundColor: "black",
+  },
 });
 
 function HomePage() {
-
   const classes = useStyles();
-  
-  const arr = JSON.parse(localStorage.getItem("formData"));
-
   return (
     <>
-      <Navbar />
+      <Box className={classes.nav}>
+        <Navbar />
+      </Box>
       <BlueGradianBox />
       <JobPortalSearchBox />
       <AboutJustJobs />
       <Testimonials />
       <CompanyLogos />
       <Footer />
-      <Box className={classes.card}>
-        {arr?.map((element) => (
-          <JobCard jobTitle={element.jobTitle} companyName={element.companyName} jobDescription={element.jobDescription} />
-        ))}
-      </Box>
     </>
   );
 }

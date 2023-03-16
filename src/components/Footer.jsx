@@ -1,73 +1,3 @@
-// import React from "react";
-// import { makeStyles } from "@mui/styles";
-// import { Container, Grid, Typography, Link } from "@mui/material";
-
-// const useStyles = makeStyles(() => ({
-//   root: {
-//     backgroundColor: "#1e2330",
-//     padding: "30px]",
-//     color: "#fff",
-//   },
-//   footerLink: {
-//     color: "#fff",
-//     textDecoration: "none",
-//     "&:hover": {
-//       textDecoration: "underline",
-//     },
-//   },
-//   footerText: {
-//     marginBottom: "20px",
-//   },
-// }));
-
-// function Footer() {
-//   const classes = useStyles();
-
-//   return (
-//     <footer className={classes.root}>
-//       <Container maxWidth="lg">
-//         <Grid container spacing={4}>
-//           <Grid item xs={12} md={6}>
-            
-//           </Grid>
-//           <Grid item xs={12} md={6}>
-//             <Typography variant="h6" gutterBottom>
-//               Useful Links
-//             </Typography>
-//             <ul>
-//               <li>
-//                 <Link className={classes.footerLink} href="/">
-//                   Home
-//                 </Link>
-//               </li>
-            
-//               <li>
-//                 <Link className={classes.footerLink} href="/jobs">
-//                   Jobs
-//                 </Link>
-//               </li>
-//               <li>
-//                 <Link className={classes.footerLink} href="/contact">
-//                   Contact Us
-//                 </Link>
-//               </li>
-//             </ul>
-//           </Grid>
-//         </Grid>
-//         <Typography variant="body2" color="inherit" align="center">
-//           {"© "}
-//           <Link className={classes.footerLink} href="/">
-//             JustJobs
-//           </Link>{" "}
-//           {new Date().getFullYear()}
-//         </Typography>
-//       </Container>
-//     </footer>
-//   );
-// }
-
-// export default Footer;
-
 
 import React from "react";
 import { makeStyles } from "@mui/styles";
@@ -167,13 +97,13 @@ function Footer() {
               Contact Us
             </Typography>
             <Typography className={classes.footerText} variant="body2">
-              Address: 123 Main St, Anytown USA
+              Address: 123 Main St, Town , India
             </Typography>
             <Typography className={classes.footerText} variant="body2">
               Email: info@justjobs.com
             </Typography>
             <Typography className={classes.footerText} variant="body2">
-              Phone: (123) 456-7890
+              Phone: +91-123456789
             </Typography>
           </Grid>
         </Grid>

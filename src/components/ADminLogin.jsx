@@ -8,6 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import BlueGradianBox from "./BlueGradianBox";
 import { makeStyles } from "@material-ui/core/styles";
+import Footer from "./Footer";
 
 
 
@@ -19,12 +20,14 @@ const useStyles = makeStyles(() => ({
     boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.1)",
     borderRadius: "10px",
     padding: "20px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
     justifyContent: "space-between",
     maxWidth: "40%",
     margin: "70px auto",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "30px",
   },
 }));
 
@@ -62,11 +65,7 @@ const AdminLoginForm = () => {
       
       <Box className = {classes.container}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "30px",
+        
         }}
       >
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -92,6 +91,7 @@ const AdminLoginForm = () => {
           </Button>
         </form>
       </Box>
+      <Footer />
     </>
   );
 };

@@ -65,7 +65,7 @@ function CompanyLogos() {
 
   return (
     <Box className={classes.root}>
-      <Typography variant="h3" className={classes.title}>
+      <Typography variant="h3" className={classes.title} id="heading">
         Featured Companies
       </Typography>
       <Box className={classes.logoContainer}>

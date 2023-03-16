@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const jobTypes = ["Full-time", "Part-time", "Contract", "Temporary", "Internship"];
-const jobLocations = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+const jobLocations = ["Noida", "Banglore", "Hyderabad", "Channai", "Jaipur"];
 
 const PostJobForm = () => {
   const navigate = useNavigate();
@@ -59,11 +59,11 @@ const PostJobForm = () => {
     jobTitle: "",
     jobType: "",
     jobLocation: "",
-    salary: "",
+    companyName: "",
     resume: false,
     phone: false,
     interview: false,
-    description: "",
+    jobDescription: "",
   });
 
   const handleChange = (event) => {
@@ -85,6 +85,7 @@ const PostJobForm = () => {
     oldData.push(data);
     console.log(oldData);
     localStorage.setItem("formData", JSON.stringify(oldData));
+    navigate("/category")
   };
 
   return (
@@ -92,7 +93,7 @@ const PostJobForm = () => {
       <Navbar />
       <BlueGradianBox />
       <Box className={classes.container}>
-        <form
+        <form 
           style={{
             display: "flex",
             // flexDirection: "column",
@@ -134,7 +135,7 @@ const PostJobForm = () => {
             </Select>
           </FormControl>
 
-          <TextField id="salary" label="Salary" variant="outlined" name="salary" className={classes.textField} value={data.salary} onChange={handleChange} />
+          <TextField id="companyName" label="companyName" variant="outlined" name="companyName" className={classes.textField} value={data.companyName} onChange={handleChange} />
 
           <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">Hiring Process</FormLabel>
@@ -152,18 +153,18 @@ const PostJobForm = () => {
           </FormControl>
 
           <TextField
-            id="description"
-            label="Job Description"
+            id="jobDescription"
+            label=" Job Description"
             multiline
             
             rows={4}
-            name="description"
+            name="jobDescription"
             variant="outlined"
             className={classes.textField}
-            value={data.description}
+            value={data.jobDescription}
             onChange={handleChange}
           />
-          <Button type="submit" variant="contained" color="primary" onClick ={navigate("/category")}>
+          <Button type="submit" variant="contained" color="primary" >
           Post Job
         </Button>
         </form>

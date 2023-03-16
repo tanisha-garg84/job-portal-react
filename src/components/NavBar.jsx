@@ -1,9 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link} from "react-router-dom";
 import { AppBar, Toolbar, makeStyles } from "@material-ui/core";
 import { Button } from "@mui/material";
 import logo from "./Assets/logo.jpeg";
 import Box from "@mui/material/Box";
+
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -20,15 +21,16 @@ function Navbar() {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box className="box_item">
       <AppBar position="sticky" className={classes.appBar}>
         <Toolbar>
+          <Link to = "/">
           <img
             src={logo}
             alt="react"
             style={{ width: "150px", height: "50px" }}
           />
-
+          </Link>
           <Box
             sx={{
               display: "flex",
@@ -37,7 +39,7 @@ function Navbar() {
               gap: "20px",
             }}
           >
-            <Button className="login">Employer Zone</Button>
+            <Button className="login" onClick={() => navigate("/AdminLogin")}>Admin Login</Button>
             <Button
               variant="outlined"
               onClick={() => navigate("/CategorizedJobs")}
